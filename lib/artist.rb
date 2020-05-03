@@ -27,7 +27,7 @@ class Artist
     if self.find(name)
       self.find(name)
     else 
-      self.
+      self.new(name)
   end
   
   def print_songs
