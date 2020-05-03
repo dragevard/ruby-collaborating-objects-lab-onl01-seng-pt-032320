@@ -4,5 +4,8 @@ class Song
   
   @@all = []
   
-  def initialize(song)
+  def initialize(name)
+    @name = name 
+    @@all << self 
+    
     
