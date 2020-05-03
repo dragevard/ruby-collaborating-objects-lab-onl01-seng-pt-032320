@@ -15,4 +15,10 @@ class Artist
   def add_song(instance)
     instance.artist = self
   end 
+  
+  def songs
+    song.all.select do |song|
+      song.artist == self 
+    end 
+  end 
 end
