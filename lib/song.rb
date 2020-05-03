@@ -13,6 +13,8 @@ class Song
     @@all 
   end
   
+  def add_song
+  
   def self.new_by_filename(file)
     new_file = file.delete_suffix(".mp3").split(" - ")
     artist = new_file[0]
