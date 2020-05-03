@@ -29,4 +29,7 @@ class Artist
       self.new(name)
     end
   end
+  
+  def print_songs
+    
 end
