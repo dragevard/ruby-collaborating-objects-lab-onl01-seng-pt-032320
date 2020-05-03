@@ -1,5 +1,5 @@
 class Artist 
-  attr_accessor :name, :songs
+  attr_accessor :name
   
   @@all = []
   
@@ -13,7 +13,9 @@ class Artist
   end
   
   def add_song(instance)
+    @songs << instance
     instance.artist = self
+    
   end 
   
   def songs
