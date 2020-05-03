@@ -13,13 +13,12 @@ class Artist
   end
   
   def add_song(instance)
-    @songs << instance
     instance.artist = self
     
   end 
   
   def songs
-    song.all.select do |song|
+    Song.all.select do |song|
       song.artist == self 
     end 
   end 
