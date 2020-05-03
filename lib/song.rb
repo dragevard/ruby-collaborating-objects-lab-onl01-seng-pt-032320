@@ -16,11 +16,12 @@ class Song
   def add_song
   
   def self.new_by_filename(file)
-    new_file = file.delete_suffix(".mp3").split(" - ")
-    artist = new_file[0]
-    song = new_file[1]
+    song = file.split(" - ")[1]
+    artist = file.split(" - ")[0]
     new_song = self.new(song)
-    new_song.artist_name = artist 
+    new_artist = Artist.find_or_create_by_name(artist)
+    artist.add_song(new_song)
+    song.artist = new_artist
     new_song
   end
   
